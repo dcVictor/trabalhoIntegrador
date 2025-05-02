@@ -42,6 +42,30 @@ header {
     width: 30px;
     height: 30px;
     border: 5px solid #DAA520;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-square::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(
+        0deg,
+        #DAA520 0px,
+        #DAA520 3px,
+        #b8860b 3px,
+        #b8860b 4px
+    );
+    transform: translateY(-100%);
+    transition: transform 3s ease;
+}
+
+.logo-square:hover::before {
+    transform: translateY(0);
 }
 
 .logo-text {
