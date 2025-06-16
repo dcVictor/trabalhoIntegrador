@@ -20,7 +20,7 @@ const PORT = 3002;
 app.listen(PORT, () => console.log(`Servidor está rodando na porta ${PORT}.`));
 
 app.post("/register", async (req, res) => {
-  const { usuario, senha } = req.body;
+  const { cracha, usuario, senha } = req.body;
 
   try {
     const existe = await db.oneOrNone("SELECT * FROM usuarios WHERE usuario = $1", [usuario]);
@@ -31,7 +31,7 @@ app.post("/register", async (req, res) => {
 
     const hash = await bcrypt.hash(senha, saltRounds);
 
-    await db.none("INSERT INTO usuarios (usuario, senha) VALUES ($1, $2)", [usuario, hash]);
+    await db.none("INSERT INTO usuarios (cracha, usuario, senha) VALUES ($1, $2, $3)", [cracha, usuario, hash]);
 
     res.json({ msg: "Cadastrado com sucesso!" });
 
