@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Axios from "axios";
 import './login.css'
 import { useNavigate } from 'react-router-dom'
 import api from '../../services/api'
