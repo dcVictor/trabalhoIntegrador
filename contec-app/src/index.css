@@ -5,6 +5,17 @@
   font-family: "Poppins", sans-serif;
 }
 
+.layout-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-content-container{
+  display: flex;
+  width: 100%;
+}
+
+
 html, body, #root {
   height: 100%;
   width: 100%;

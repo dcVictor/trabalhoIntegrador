@@ -21,7 +21,7 @@ app.listen(PORT, () => console.log(`Servidor está rodando na porta ${PORT}.`));
 
 app.post("/register", async (req, res) => {
   const { cracha, usuario, senha } = req.body;
-
+  
   try {
     const existe = await db.oneOrNone("SELECT * FROM usuarios WHERE usuario = $1", [usuario]);
 

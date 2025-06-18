@@ -2,7 +2,7 @@ import './register.css'
 import api from '../../services/api'
 import { useState } from 'react'
 
-function Cadastro() {
+function Cadastro({open, onFechado}) {
   const [usuario, setUsuario] = useState('')
   const [senha, setSenha] = useState('')
   const [cracha, setCracha] = useState('')
@@ -30,10 +30,10 @@ function Cadastro() {
       console.error("Erro ao cadastrar usuário:", error)
     }
   }
-
+  if(!open) return null;
   return (
     <div className='container'>
-      <form id="registerForm" onSubmit={registerSubmit}>
+      <form id="register" onSubmit={registerSubmit}>
         <h1 id='login'><center>Cadastro de usuários</center></h1>
 
         <input
@@ -63,6 +63,7 @@ function Cadastro() {
           onChange={(e) => setSenha(e.target.value)}
         />
 
+        <button type='submit' onClick={onFechado}>Fechar</button>
         <button type='submit'>Cadastrar</button>
       </form>
 

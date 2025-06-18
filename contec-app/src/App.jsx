@@ -5,13 +5,22 @@ import Login from './pages/login/login.jsx'
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom'
 import Cadastro from './pages/register/register.jsx'
 import Header from './components/header.jsx'
+import MenuLateral from './components/menuLateral/menuLateral.jsx'
+import Admin from './pages/dashboard/admin/admin.jsx'
 
 function App(){
   return(
     <Router>
       <Routes>
-        <Route path="/" element={<Login />}></Route>
-        <Route path="/register" element={<Layout />}/>
+        <Route path="/" element={<LayoutLogin />}>
+        </Route>
+          
+        <Route path='/admin' element={<Admin />}></Route>
+
+        <Route path="/" element={<Layout />}>
+            <Route path='register' element={<Cadastro />}/>
+          
+        </Route>
       </Routes>
     </Router>
   )
@@ -19,10 +28,21 @@ function App(){
 
 function Layout() {
   return (
+    <div className="layout-container">
+      <Header />
+      <main className="layout-content-container">
+        <MenuLateral /> 
+        <Outlet />   
+      </main>
+    </div>
+  );
+}
+
+function LayoutLogin() {
+  return (
     <div>
-      {<Header />}
       <main>
-        <Outlet /> {<Cadastro />}
+        <Outlet /> {<Login />}  
       </main>
     </div>
   );
