@@ -32,8 +32,11 @@ function Cadastro({open, onFechado}) {
   }
   if(!open) return null;
   return (
+
+    <div onClick={onFechado} className='escuridao' >
     <div className='container'>
-      <form id="register" onSubmit={registerSubmit}>
+      
+      <form id="register" onSubmit={registerSubmit} onClick={(e) => e.stopPropagation()}>
         <h1 id='login'><center>Cadastro de usuários</center></h1>
 
         <input
@@ -77,6 +80,7 @@ function Cadastro({open, onFechado}) {
         </div>
       ))}
     </div>
+   </div> 
   )
 }
 
