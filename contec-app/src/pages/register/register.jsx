@@ -66,8 +66,9 @@ function Cadastro({open, onFechado}) {
           onChange={(e) => setSenha(e.target.value)}
         />
 
-        <button type='submit' onClick={onFechado}>Fechar</button>
+      
         <button type='submit'>Cadastrar</button>
+        <button id='closeButton' type='submit' onClick={onFechado}>Fechar</button>
       </form>
 
       {/* Lista de usuários cadastrados localmente */}

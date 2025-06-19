@@ -12,13 +12,11 @@ function App(){
   return(
     <Router>
       <Routes>
-        <Route path="/" element={<LayoutLogin />}>
-        </Route>
-          
-        <Route path='/admin' element={<Admin />}></Route>
+        <Route path="/" element={<LayoutLogin />}></Route>
 
+        <Route path='/admin' element={<Admin />}/>
         <Route path="/" element={<Layout />}>
-            <Route path='register' element={<Cadastro />}/>
+        <Route path='register' element={<Cadastro />}/>
           
         </Route>
       </Routes>
@@ -42,7 +40,7 @@ function LayoutLogin() {
   return (
     <div>
       <main>
-        <Outlet /> {<Login />}  
+        <Login />
       </main>
     </div>
   );

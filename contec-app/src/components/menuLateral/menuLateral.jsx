@@ -6,6 +6,7 @@ function MenuLateral(){
         <nav class="sidebar">
             <div class="menu-items">
                 <ul>
+                    <li><a href="#home"><i class="fas fa-solid fa-house menu-icon"></i>Home</a></li>
                     <li><a href="#relatorios"><i class="fas fa-chart-bar menu-icon"></i>Relatórios</a></li>
                     <li><a href="#instalacoes"><i class="fas fa-hard-hat menu-icon"></i>Instalações</a></li>
                     <li><a href="#manutencoes"><i class="fas fa-tools menu-icon"></i>Manutenções</a></li>
