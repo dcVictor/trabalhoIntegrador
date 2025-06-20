@@ -9,13 +9,14 @@ import MenuLateral from './components/menuLateral/menuLateral.jsx'
 import Admin from './pages/dashboard/admin/admin.jsx'
 import TabelaUsuarios from './components/tables/usuarios.jsx'
 import Dashboard from './pages/dashboard/dashboard.jsx'
+import Ask from './pages/gemini/gemini/gemini.jsx'
 
 function App(){
   return(
     <Router>
       <Routes>
         <Route path="/" element={<LayoutLogin />}></Route>
-
+        <Route path='/ask' element={<Ask />}/>
         <Route path='/admin' element={<Admin />}/>
         <Route path="/" element={<LayoutDashboard />}>
         <Route path='dashboard' element={<Cadastro />}/>
@@ -51,11 +52,13 @@ function LayoutLogin() {
   return (
     <div>
       <main>
-        <TabelaUsuarios />
+        <Login />
       </main>
     </div>
   );
 }
+
+
 
 export default App;
 

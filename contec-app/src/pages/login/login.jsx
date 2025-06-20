@@ -15,7 +15,7 @@ function Login() {
       usuario: usuario, 
       senha: senha,
     }).then((response) => {
-      navigate('/register')
+      navigate('/dashboard')
       console.log(response);
     })
 

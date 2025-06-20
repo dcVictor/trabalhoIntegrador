@@ -58,6 +58,7 @@
     .admin-option,
     .logout-container {
         padding: 10px 0;
+        color: #DAA520;
     }
 } 
 .menu-items {
@@ -92,4 +93,5 @@
     color: #DAA520;
     width: 20px;
     text-align: center;
+    
 }

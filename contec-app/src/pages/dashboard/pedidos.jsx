@@ -43,10 +43,11 @@ function Pedidos({open, onFechado}) {
         <input
           placeholder="Código do crachá"
           name='id'
-          type='text'
+          type='radio'
           required
           value={cracha}
           onChange={(e) => setCracha(e.target.value)}
+
         />
 
         <input
