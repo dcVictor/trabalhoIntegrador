@@ -43,7 +43,7 @@ function Cadastro({open, onFechado}) {
         <input
           placeholder="Código do crachá"
           name='id'
-          type='radio'
+          type='text'
           required
           value={cracha}
           onChange={(e) => setCracha(e.target.value)}

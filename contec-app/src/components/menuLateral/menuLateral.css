@@ -12,9 +12,9 @@
 #dashboardbutton{
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* <-- alinha o conteúdo à esquerda */
+    justify-content: flex-start;  /* <-- alinha o conteúdo à esquerda  */
     padding: 12px 24px;           /* reduzido para não empurrar demais */
-    width: 100%;                  /* ocupa toda a largura da coluna */
+    width: 100%;                  /* ocupa toda a largura da coluna    */
     color: #ffffff;
     text-decoration: none;
     transition: all 0.3s;
@@ -58,7 +58,6 @@
     .admin-option,
     .logout-container {
         padding: 10px 0;
-        color: #DAA520;
     }
 } 
 .menu-items {

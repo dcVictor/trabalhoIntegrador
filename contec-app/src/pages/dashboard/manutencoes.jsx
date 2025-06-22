@@ -34,7 +34,6 @@ function Manutencoes({open, onFechado}) {
   if(!open) return null;
   return (
 
-    <div onClick={onFechado} className='escuridao' >
     <div className='container'>
       
       <form id="register" onSubmit={registerSubmit} onClick={(e) => e.stopPropagation()}>
@@ -82,7 +81,7 @@ function Manutencoes({open, onFechado}) {
         </div>
       ))}
     </div>
-   </div> 
+
   )
 }
 

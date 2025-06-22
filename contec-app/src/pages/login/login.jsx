@@ -8,7 +8,7 @@ function Login() {
   const [senha, setSenha] = useState('')
   const navigate = useNavigate();
 
-  const handleSubmit = async (event) => {
+ /* const handleSubmit = async (event) => {
     event.preventDefault()
     
     api.post("/login", {
@@ -20,16 +20,17 @@ function Login() {
     })
 
     console.log(usuario, senha);
-    /*try {
-      // Exemplo de chamada para API - ajuste conforme sua API
-      const resposta = await Api.post('/login', { username: usuario, password: senha })
-      console.log('Login realizado com sucesso:', resposta.data)
-      // Aqui você pode redirecionar ou salvar token, por exemplo
-    } catch (erro) {
-      console.error('Erro no login:', erro)
-      // Aqui você pode mostrar uma mensagem de erro para o usuário
-    }*/
-  }
+ */
+
+
+// FUNÇÃO LIBERA QUALQUER ENTRADA APENAS PARA TESTES
+ const handleSubmit = (event) => {
+    event.preventDefault();  
+    console.log('Usuário:', usuario, 'Senha:', senha);
+    navigate('/dashboard');
+  };
+
+
 
   return (
     <div className="login-container">
